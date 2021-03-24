@@ -10,7 +10,8 @@ export const countDown = (delay) => {
     console.log('distance: ', distance)
 
     if (distance < 0) {
-      document.getElementById('countDown').innerHTML = 'EXPIRED - Sale is On!!!'
+      console.log('DISTANCE IS LESS THAN ZERO')
+      document.getElementById('section').innerHTML = 'EXPIRED - Sale is On!!!'
       clearInterval(intVl)
     }
 
@@ -21,6 +22,10 @@ export const countDown = (delay) => {
     const seconds = Math.floor((distance % (1000 * 60)) / 1000)
 
     // Display the result in the element with id="demo"
-    document.getElementById('countDown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`
+    let countDownEl = document.getElementById('countDown')
+
+    if (countDownEl) {
+      countDownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`
+    }
   }, 1000)
 }

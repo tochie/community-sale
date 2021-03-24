@@ -20,10 +20,11 @@ if (!isNowValid(now)) {
 }
 
 const entryTimes = [
-  30, // Enters sale 0.03 second before
-  20,
   10,
-  5,
+  5, // Enters sale 0.05 second before
+  4,
+  3,
+  2,
   1,
   0
 
