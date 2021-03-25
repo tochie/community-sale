@@ -3,8 +3,8 @@ import { countDown } from './countDown.js'
 // const targetDateUTC =
 
 let hasRedirected = false
-const targetDateUTC = 1616713200000 // test: new Date().getTime() - 20000
-const url = 'https://sales.coinlist.co/casper-option-3'
+const targetDateUTC = new Date().getTime() + 10000
+const url = 'https://cnn.com'
 const delayId = document.getElementById('delayValue')
 
 // valid ONLY when `targetdateUTC` is greater than `now`
@@ -24,12 +24,13 @@ if (!isNowValid(now)) {
 }
 
 const entryTimes = [
+  200,
   500,
-  600,
   800,
   1000,
   2000,
-  3000
+  3000,
+  10
 ]
 
 const len = entryTimes.length

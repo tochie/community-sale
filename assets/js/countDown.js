@@ -5,6 +5,7 @@ export const countDown = (delay) => {
     // Find the wait between now and the count down date
     // If the count down is finished, write some text
 
+    console.log('delay: ', delay)
     let distance = delay - new Date().getTime()
 
     console.log('distance: ', distance)
